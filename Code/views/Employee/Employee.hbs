@@ -1,35 +1,39 @@
-<div class="main-content">
-         <div class="container">
-            <h1>Employee Management</h1>
-            <!-- Insert Employee Section -->
-            <section class="insert-section">
-               <h2>Insert Employee</h2>
-               <form id="insertForm">
-                  <label for="employeeName">Name:</label>
-                  <input type="text" id="employeeName" name="employeeName" required>
-                  <!-- Other employee fields -->
-                  <input type="submit" value="Insert">
-               </form>
-            </section>
-            <!-- Delete Employee Section -->
-            <section class="delete-section">
-               <h2>Delete Employee</h2>
-               <form id="deleteForm">
-                  <label for="employeeId">Employee ID:</label>
-                  <input type="text" id="employeeId" name="employeeId" required>
-                  <input type="submit" value="Delete">
-               </form>
-            </section>
-            <!-- Update Employee Section -->
-            <section class="update-section">
-               <h2>Update Employee</h2>
-               <form id="updateForm">
-                  <label for="employeeId">Employee ID:</label>
-                  <input type="text" id="employeeId" name="employeeId" required>
-                  <!-- Other fields for updating employee information -->
-                  <input type="submit" value="Update">
-               </form>
-            </section>
+<body class="main-layout inner_posituong computer_page">
+   <!-- ...existing code... -->
+   <section class="employee-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 offset-md-3">
+               <h2>Employee Management</h2>
+               <div class="buttons-container">
+                  <button class="btn btn-primary" onclick="showInsertForm()">Insert Employee</button>
+                  <button class="btn btn-danger" onclick="showDeleteForm()">Delete Employee</button>
+                  <button class="btn btn-success" onclick="showUpdateForm()">Update Employee</button>
+               </div>
+               <div id="insertForm" style="display: none;">
+                  <h3>Insert Employee</h3>
+                  <form onsubmit="insertEmployee(event)">
+                     <!-- Insert form fields here -->
+                     <button type="submit" class="btn btn-primary">Insert</button>
+                  </form>
+               </div>
+               <div id="deleteForm" style="display: none;">
+                  <h3>Delete Employee</h3>
+                  <form onsubmit="deleteEmployee(event)">
+                     <!-- Delete form fields here -->
+                     <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+               </div>
+               <div id="updateForm" style="display: none;">
+                  <h3>Update Employee</h3>
+                  <form onsubmit="updateEmployee(event)">
+                     <!-- Update form fields here -->
+                     <button type="submit" class="btn btn-success">Update</button>
+                  </form>
+               </div>
+            </div>
          </div>
       </div>
-      <!--  footer --
+   </section>
+   <!-- ...existing code... -->
+</body>

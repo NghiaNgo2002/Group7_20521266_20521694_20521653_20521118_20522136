@@ -25,6 +25,9 @@ const VGARouter = require('./components/VGA');
 const RamRouter = require('./components/Ram');
 const LaptopRouter = require('./components/Laptop');
 const EmployeeRouter = require('./components/Employee');
+const EmployeeInsertRouter = require('./components/EmployeeInsert');
+const EmployeeDeleteRouter = require('./components/EmployeeDelete');
+const EmployeeUpdateRouter = require('./components/EmployeeUpdate');
 /* --------------------------- */
 
 const app = express();
@@ -60,6 +63,9 @@ app.use('/VGA',VGARouter);
 app.use('/Ram',RamRouter);
 app.use('/Laptop',LaptopRouter);
 app.use('/Employee',EmployeeRouter);
+app.use('/EmployeeInsert',EmployeeInsertRouter);
+app.use('/EmployeeDelete',EmployeeDeleteRouter);
+app.use('/EmployeeUpdate',EmployeeUpdateRouter);
 /* --------------------------- */
 
 
