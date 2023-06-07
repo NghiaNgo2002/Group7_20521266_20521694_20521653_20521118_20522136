@@ -24,6 +24,7 @@ const MouseRouter = require('./components/Mouse');
 const VGARouter = require('./components/VGA');
 const RamRouter = require('./components/Ram');
 const LaptopRouter = require('./components/Laptop');
+const EmployeeRouter = require('./components/Employee');
 /* --------------------------- */
 
 const app = express();
@@ -58,6 +59,7 @@ app.use('/Mouse',MouseRouter);
 app.use('/VGA',VGARouter);
 app.use('/Ram',RamRouter);
 app.use('/Laptop',LaptopRouter);
+app.use('/Employee',EmployeeRouter);
 /* --------------------------- */
 
 
