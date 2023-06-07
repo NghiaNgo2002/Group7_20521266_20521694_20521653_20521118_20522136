@@ -1,0 +1,39 @@
+<body class="main-layout inner_posituong computer_page">
+   <!-- ...existing code... -->
+   <section class="customer-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 offset-md-3">
+               <h2>Customer Management</h2>
+               <div class="buttons-container">
+                  <button class="btn btn-primary" onclick="showInsertForm()">Insert Customer</button>
+                  <button class="btn btn-danger" onclick="showDeleteForm()">Delete Customer</button>
+                  <button class="btn btn-success" onclick="showUpdateForm()">Update Customer</button>
+               </div>
+               <div id="insertForm" style="display: none;">
+                  <h3>Insert Customer</h3>
+                  <form onsubmit="insertCustomer(event)">
+                     <!-- Insert form fields here -->
+                     <button type="submit" class="btn btn-primary">Insert</button>
+                  </form>
+               </div>
+               <div id="deleteForm" style="display: none;">
+                  <h3>Delete Customer</h3>
+                  <form onsubmit="deleteCustomer(event)">
+                     <!-- Delete form fields here -->
+                     <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+               </div>
+               <div id="updateForm" style="display: none;">
+                  <h3>Update Customer</h3>
+                  <form onsubmit="updateCustomer(event)">
+                     <!-- Update form fields here -->
+                     <button type="submit" class="btn btn-success">Update</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ...existing code... -->
+</body>
