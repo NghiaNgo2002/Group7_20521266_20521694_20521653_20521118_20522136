@@ -18,6 +18,7 @@ const SearchRouter = require('./components/Search');
 const LogInRouter = require('./components/LogIn');
 const RegisterRouter = require('./components/Register');
 const CartRouter = require('./components/Cart');
+const ComputerRouter = require('./components/Computer');
 /* --------------------------- */
 
 const app = express();
@@ -46,6 +47,7 @@ app.use('/Search',SearchRouter);
 app.use('/LogIn',LogInRouter);
 app.use('/Register',RegisterRouter);
 app.use('/Cart',CartRouter);
+app.use('/Computer',ComputerRouter);
 /* --------------------------- */
 
 
