@@ -20,6 +20,7 @@ const RegisterRouter = require('./components/Register');
 const CartRouter = require('./components/Cart');
 const ComputerRouter = require('./components/Computer');
 const HardiskRouter = require('./components/Hardisk');
+const MouseRouter = require('./components/Mouse');
 /* --------------------------- */
 
 const app = express();
@@ -50,6 +51,7 @@ app.use('/Register',RegisterRouter);
 app.use('/Cart',CartRouter);
 app.use('/Computer',ComputerRouter);
 app.use('/Hardisk',HardiskRouter);
+app.use('/Mouse',MouseRouter);
 /* --------------------------- */
 
 
