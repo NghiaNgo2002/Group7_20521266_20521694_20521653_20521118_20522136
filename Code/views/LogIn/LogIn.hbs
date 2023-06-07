@@ -49,6 +49,21 @@
   .login-form input[type="submit"]:hover {
     background-color: #45a049;
   }
+
+  .facebook-login-button {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .facebook-login-button:hover {
+    background-color: #2d4373;
+  }
 </style>
 
 <div class="login-form">
@@ -61,5 +76,17 @@
     <input type="password" id="password" name="password" required>
 
     <input type="submit" value="Login">
+
+    <div class="or-separator">OR</div>
+
+    <button class="facebook-login-button" onclick="loginWithFacebook()">Login with Facebook</button>
   </form>
 </div>
+
+<script>
+  function loginWithFacebook() {
+    // Implement the Facebook login functionality here
+    // This may include redirecting to the Facebook login page or using the Facebook SDK
+    // Once the user is authenticated, you can perform necessary actions, such as submitting the login form
+  }
+</script>
