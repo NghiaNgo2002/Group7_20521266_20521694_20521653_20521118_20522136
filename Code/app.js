@@ -29,6 +29,9 @@ const EmployeeInsertRouter = require('./components/EmployeeInsert');
 const EmployeeDeleteRouter = require('./components/EmployeeDelete');
 const EmployeeUpdateRouter = require('./components/EmployeeUpdate');
 const CustomerRouter = require('./components/Customer');
+const CustomerInsertRouter = require('./components/CustomerInsert');
+const CustomerDeleteRouter = require('./components/CustomerDelete');
+const CustomerUpdateRouter = require('./components/CustomerUpdate');
 /* --------------------------- */
 
 const app = express();
@@ -68,6 +71,9 @@ app.use('/EmployeeInsert',EmployeeInsertRouter);
 app.use('/EmployeeDelete',EmployeeDeleteRouter);
 app.use('/EmployeeUpdate',EmployeeUpdateRouter);
 app.use('/Customer',CustomerRouter);
+app.use('/CustomerInsert',CustomerInsertRouter);
+app.use('/CustomerDelete',CustomerDeleteRouter);
+app.use('/CustomerUpdate',CustomerUpdateRouter);
 /* --------------------------- */
 
 
