@@ -38,16 +38,19 @@
                <div class="col-md-12">
                   <div class="our_products">
                      <div class="row">
-                        <div class="col-md-4 margin_bottom1">
+
+                        {{#each Products}} 
+                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <div class="product-image">
                               <figure><img src="images/Case.png" alt="#"/></figure>
                               </div>
-                              <a class="product-button" href="./Computer">Computer</a>
+                              <a class="product-button" href="./{{Name}}">{{Name}}</a>
                            
                            </div>
                         </div>
-                        <div class="col-md-4 margin_bottom1">
+                        {{/each}}
+                        {{!-- <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <div class="product-image">
                               <figure><img src="images/Laptop.png" alt="#"/></figure>
@@ -86,7 +89,7 @@
                               </div>
                               <a class="product-button" href="./Hardisk">Hardisk</a>
                            </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-12">
                            <a class="read_more" href="#">See More</a>
                         </div>
