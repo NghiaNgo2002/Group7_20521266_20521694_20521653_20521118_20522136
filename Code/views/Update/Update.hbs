@@ -1,0 +1,27 @@
+<div class="update-form">
+         <h2>Update Product</h2>
+         <form action="/update_product" method="POST">
+           <label for="product_id">Product ID:</label>
+           <input type="text" id="product_id" name="product_id" required>
+     
+           <label for="product_name">Product Name:</label>
+           <input type="text" id="product_name" name="product_name" required>
+     
+           <label for="product_price">Price:</label>
+           <input type="text" id="product_price" name="product_price" required>
+     
+           <label for="product_category">Category:</label>
+           <select id="product_category" name="product_category" required>
+             <option value="" disabled selected>Select a category</option>
+             <option value="laptop">Laptop</option>
+             <option value="computer">Computer</option>
+             <option value="computer_accessories">Computer Accessories</option>
+           </select>
+     
+           <label for="product_description">Description:</label>
+           <textarea id="product_description" name="product_description" rows="4" required></textarea>
+     
+           <input type="submit" value="Update Product">
+         </form>
+       </div>
+     

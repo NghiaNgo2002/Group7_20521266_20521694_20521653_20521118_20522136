@@ -1,0 +1,13 @@
+<div class="delete-form">
+         <h2>Delete Product</h2>
+         <form action="/delete_product" method="POST" onsubmit="return confirmDelete()">
+           <label for="product_id">Product ID:</label>
+           <input type="text" id="product_id" name="product_id" required>
+
+           <label for="product_name">Product Name:</label>
+           <input type="text" id="product_name" name="product_name" required>
+
+           <input type="submit" value="Delete Product">
+           <p class="delete-confirmation" id="delete_confirmation">Are you sure to delete this product?</p>
+         </form>
+       </div>
