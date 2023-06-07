@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <style>
   body {
     margin: 0;
@@ -50,7 +52,16 @@
     background-color: #45a049;
   }
 
-  .facebook-login-button {
+  .social-login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #3b5998;
     color: #fff;
     padding: 10px;
@@ -61,8 +72,20 @@
     margin-bottom: 10px;
   }
 
-  .facebook-login-button:hover {
+  .social-login-button:hover {
     background-color: #2d4373;
+  }
+
+  .instagram-login-button {
+    background-color: #c32aa3;
+  }
+
+  .gmail-login-button {
+    background-color: #dd4b39;
+  }
+
+  .icon {
+    margin-right: 8px;
   }
 </style>
 
@@ -79,14 +102,41 @@
 
     <div class="or-separator">OR</div>
 
-    <button class="facebook-login-button" onclick="loginWithFacebook()">Login with Facebook</button>
+    <div class="social-login-buttons">
+      <button class="social-login-button" onclick="loginWithFacebook()">
+        <i class="fab fa-facebook-f icon"></i>
+        Login with Facebook
+      </button>
+      <button class="social-login-button instagram-login-button" onclick="loginWithInstagram()">
+        <i class="fab fa-instagram icon"></i>
+        Login with Instagram
+      </button>
+      <button class="social-login-button gmail-login-button" onclick="loginWithGoogle()">
+        <i class="fab fa-google icon"></i>
+        Login with Gmail
+      </button>
+    </div>
   </form>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
 <script>
   function loginWithFacebook() {
     // Implement the Facebook login functionality here
     // This may include redirecting to the Facebook login page or using the Facebook SDK
+    // Once the user is authenticated, you can perform necessary actions, such as submitting the login form
+  }
+
+  function loginWithInstagram() {
+    // Implement the Instagram login functionality here
+    // This may include redirecting to the Instagram login page or using the Instagram API
+    // Once the user is authenticated, you can perform necessary actions, such as submitting the login form
+  }
+
+  function loginWithGoogle() {
+    // Implement the Google login functionality here
+    // This may include redirecting to the Google login page or using the Google Sign-In API
     // Once the user is authenticated, you can perform necessary actions, such as submitting the login form
   }
 </script>
