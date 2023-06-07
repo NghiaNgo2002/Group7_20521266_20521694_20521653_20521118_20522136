@@ -21,6 +21,8 @@ const CartRouter = require('./components/Cart');
 const ComputerRouter = require('./components/Computer');
 const MouseRouter = require('./components/Mouse');
 const HardiskRouter = require('./components/Hardisk');
+const LaptopRouter = require('./components/Laptop');
+
 /* --------------------------- */
 
 const app = express();
@@ -52,6 +54,7 @@ app.use('/Cart',CartRouter);
 app.use('/Computer',ComputerRouter);
 app.use('/Mouse',MouseRouter);
 app.use('/Hardisk',HardiskRouter);
+app.use('/Laptop',LaptopRouter);
 
 /* --------------------------- */
 
