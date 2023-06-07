@@ -19,6 +19,7 @@ const LogInRouter = require('./components/LogIn');
 const RegisterRouter = require('./components/Register');
 const CartRouter = require('./components/Cart');
 const ComputerRouter = require('./components/Computer');
+const MouseRouter = require('./components/Mouse');
 /* --------------------------- */
 
 const app = express();
@@ -48,6 +49,7 @@ app.use('/LogIn',LogInRouter);
 app.use('/Register',RegisterRouter);
 app.use('/Cart',CartRouter);
 app.use('/Computer',ComputerRouter);
+app.use('/Mouse',MouseRouter);
 /* --------------------------- */
 
 
