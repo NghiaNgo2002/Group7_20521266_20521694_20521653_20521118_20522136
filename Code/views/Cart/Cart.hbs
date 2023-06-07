@@ -1,0 +1,74 @@
+<div class="cart-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h2>Your Cart</h2>
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                     </tr>
+                  </thead>
+                  <tbody id="cartItems"></tbody>
+               </table>
+               <button class="btn btn-primary" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end cart -->
+
+   <!-- footer -->
+   <!-- ...code footer section... -->
+   <!-- end footer -->
+   <!-- Javascript files -->
+   <script>
+      function renderCartItems() {
+         // Lấy thông tin giỏ hàng từ localStorage
+         var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+         // Hiển thị sản phẩm trong giỏ hàng
+         var cartItemsTable = document.getElementById("cartItems");
+         cartItemsTable.innerHTML = "";
+
+         for (var i = 0; i < cartItems.length; i++) {
+            var row = document.createElement("tr");
+
+            var codeCell = document.createElement("td");
+            codeCell.textContent = cartItems[i].code;
+            row.appendChild(codeCell);
+
+            var nameCell = document.createElement("td");
+            nameCell.textContent = cartItems[i].name;
+            row.appendChild(nameCell);
+
+            var quantityCell = document.createElement("td");
+            quantityCell.textContent = cartItems[i].quantity;
+            row.appendChild(quantityCell);
+
+            var priceCell = document.createElement("td");
+            priceCell.textContent = "$" + cartItems[i].price;
+            row.appendChild(priceCell);
+
+            cartItemsTable.appendChild(row);
+         }
+      }
+
+      function proceedToPayment() {
+         // Kiểm tra giỏ hàng
+         var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+         if (cartItems.length === 0) {
+            alert("Your cart is empty. Please add some items.");
+         } else {
+            // Chuyển hướng đến trang thanh toán
+            window.location.href = "payment.html";
+         }
+      }
+
+      // Render sản phẩm trong giỏ hàng khi trang cart.html được tải
+      renderCartItems();
+   </script>

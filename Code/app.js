@@ -16,6 +16,8 @@ const DeleteRouter = require('./components/Delete');
 const UpdateRouter = require('./components/Update');
 const SearchRouter = require('./components/Search');
 const LogInRouter = require('./components/LogIn');
+const RegisterRouter = require('./components/Register');
+const CartRouter = require('./components/Cart');
 /* --------------------------- */
 
 const app = express();
@@ -42,6 +44,8 @@ app.use('/Delete',DeleteRouter);
 app.use('/Update',UpdateRouter);
 app.use('/Search',SearchRouter);
 app.use('/LogIn',LogInRouter);
+app.use('/Register',RegisterRouter);
+app.use('/Cart',CartRouter);
 /* --------------------------- */
 
 
