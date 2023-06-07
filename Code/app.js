@@ -22,6 +22,8 @@ const ComputerRouter = require('./components/Computer');
 const HardiskRouter = require('./components/Hardisk');
 const MouseRouter = require('./components/Mouse');
 const VGARouter = require('./components/VGA');
+const RamRouter = require('./components/Ram');
+const LaptopRouter = require('./components/Laptop');
 /* --------------------------- */
 
 const app = express();
@@ -54,6 +56,8 @@ app.use('/Computer',ComputerRouter);
 app.use('/Hardisk',HardiskRouter);
 app.use('/Mouse',MouseRouter);
 app.use('/VGA',VGARouter);
+app.use('/Ram',RamRouter);
+app.use('/Laptop',LaptopRouter);
 /* --------------------------- */
 
 
