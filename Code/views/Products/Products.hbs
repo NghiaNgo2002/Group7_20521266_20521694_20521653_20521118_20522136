@@ -3,7 +3,7 @@
          display: inline-block;
          padding: 15px 25px;
          background-color: #000000;
-         color: #fff;
+         color: #f0e9e9;
          text-decoration: none;
          border-radius: 5px;
          font-size: 16px;
@@ -39,17 +39,17 @@
                   <div class="our_products">
                      <div class="row">
 
-                        {{#each Products}} 
-                         <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <div class="product-image">
-                              <figure><img src="images/Case.png" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./{{Name}}">{{Name}}</a>
-                           
-                           </div>
-                        </div>
-                        {{/each}}
+                        {{#each Products}}
+<div class="col-md-4 margin_bottom1">
+  <div class="product_box">
+    <div class="product-image">
+      <figure><img src="images/{{name}}.png" alt="{{name}}"/></figure>
+    </div>
+    <a class="product-button" href="./{{name}}">{{name}}</a>
+  </div>
+</div>
+{{/each}}
+
                         {{!-- <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <div class="product-image">
