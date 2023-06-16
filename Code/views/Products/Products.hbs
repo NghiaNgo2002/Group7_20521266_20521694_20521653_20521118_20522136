@@ -1,9 +1,83 @@
 <style>
-   .product-button {
+.product {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 20px auto;
+}
+.product-container {
+         margin: 20px auto;
+         max-width: 1000px;
+         height: 500px;
+         padding: 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         background-color: #f9f9f9;
+         text-align: center;
+         display: flex;
+         /* Center the content */
+}
+.product-image {
+   width: 300px;
+   height: 300px;
+   display: flex;
+   align-items: left;
+   justify-content: left;
+   overflow: hidden;
+
+}
+
+.product-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   display: flex;
+   flex-direction: column;
+   justify-content: left;   
+}
+
+.product-details {
+   width: 300px;
+   height: 360px;
+   margin-left: 50;
+}
+
+.product-name {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+.product-specifications {
+   margin-bottom: 10px;
+   color: #000000;
+   text-align: center;
+}
+
+.product-specifications p {
+   margin: 5px 0;
+}
+
+.product-price {
+   font-weight: bold;
+   margin-top: 10px;
+   color: #e67e22;
+   text-align: center;
+}
+
+.product-warranty {
+   margin-top: 5px;
+   text-align: center;
+}
+
+
+.product-button {
          display: inline-block;
-         padding: 15px 25px;
-         background-color: #000000;
-         color: #f0e9e9;
+         padding: 10px 20px;
+         background-color: #2980b9;
+         color: #fff;
          text-decoration: none;
          border-radius: 5px;
          font-size: 16px;
@@ -14,16 +88,15 @@
          width: 180px;
          height: 40px;
          text-align: center;
-   }
-   .product-image {
-      height: 300px;
-      margin-bottom: 40;
-   }
-   .product_image{
-      height: 200px;
-      margin-bottom: 40;
-   }
-</style>
+         
+      }
+
+      .product-button:hover {
+         background-color: #1c7dbe;
+      }
+
+   </style>
+
 <!-- products -->
       <div  class="products">
          <div class="container">
@@ -39,57 +112,27 @@
                   <div class="our_products">
                      <div class="row">
 
-                        {{#each Products}}
-<div class="col-md-4 margin_bottom1">
-  <div class="product_box">
-    <div class="product-image">
-      <figure><img src="images/{{name}}.png" alt="{{name}}"/></figure>
-    </div>
-    <a class="product-button" href="./{{name}}">{{name}}</a>
-  </div>
-</div>
-{{/each}}
-
-                        {{!-- <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <div class="product-image">
-                              <figure><img src="images/Laptop.png" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./Laptop">Laptop</a>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <div class="product-image">
-                              <figure><img src="images/Mouse.png" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./Mouse">Mouse</a>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <div class="product_image">
-                              <figure><img src="images/product7.png" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./Ram">Ram</a>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <div class="product_image">
-                              <figure><img src="images/VGA.jpg" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./VGA">VGA</a>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <div class="product_image">
-                              <figure><img src="images/product6.png" alt="#"/></figure>
-                              </div>
-                              <a class="product-button" href="./Hardisk">Hardisk</a>
-                           </div>
-                        </div> --}}
+                        {{#each Products}}        
+                         <div class="product-container">
+         <div class="product">
+            <div class="product-image">
+               <img src="images/{{id}}.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+               <h3 class="product-name">{{name}}</h3>
+               <div class="product-specifications">
+                  <p>ID: {{id}}</p>
+                  <p>Type: {{type}}</p>
+                  <p>Description: {{description}}</p>
+               </div>
+               <p class="product-price">Price: {{price}}</p>
+               <p class="product-warranty">Warranty: 36 months</p>
+               <a class="product-button" href="#">Order Product</a>
+            </div>
+         </div>
+      </div>
+                        {{/each}}
+                        
                         <div class="col-md-12">
                            <a class="read_more" href="#">See More</a>
                         </div>

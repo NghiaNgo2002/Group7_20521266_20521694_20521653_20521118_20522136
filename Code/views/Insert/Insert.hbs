@@ -61,18 +61,19 @@
   }
 </style>
 
+
 <div class="insert-form">
   <h2>Insert Product</h2>
-  <form action="/insert_product" method="POST" enctype="multipart/form-data">
+  <form action="/insert/Product" method="POST">
     <label for="product_type">Product Type:</label>
     <select id="product_type" name="product_type" required>
       <option value="" disabled selected>Select a product</option>
       <option value="laptop">Laptop</option>
       <option value="computer">Computer</option>
       <option value="ram">RAM</option>
-      <option value="mainboard">Mainboard</option>
-      <option value="cpu">CPU</option>
-      <option value="storage">Storage</option>
+      <option value="Hardisk">Mainboard</option>
+      <option value="VGA">CPU</option>
+      <option value="Mouse">Storage</option>
     </select>
 
     <label for="product_id">Product ID:</label>
@@ -98,6 +99,6 @@
     <label for="product_image">Image:</label>
     <input type="file" id="product_image" name="product_image" required>
 
-    <input type="submit" value="Insert Product">
+    <input type="submit" onclick="Notify()" value="Insert Product">
   </form>
 </div>
