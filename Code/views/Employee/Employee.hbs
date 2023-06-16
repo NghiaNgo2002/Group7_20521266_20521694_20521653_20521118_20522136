@@ -1,9 +1,37 @@
-<body class="main-layout inner_posituong computer_page">
-   <!-- ...existing code... -->
-   <section class="employee-section">
-      <div class="container">
+<div class="body-section">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Employee Information</h2>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Name</th>
+                     <th>Phone</th>
+                     <th>Address</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {{#each Employee}}
+                  <tr>
+                     <td>{{id}}</td>
+                     <td>{{name}}</td>
+                     <td>{{phone}}</td>
+                     <td>{{address}}</td>
+                  </tr>
+                  {{/each}}
+                  </tbody>
+                  </table>
+                   </div>
+      </div>
+   </div>
+</div>
+
+ 
+   <div class="container">
          <div class="row">
-            <div class="col-md-6 offset-md-3">
+             <div class="col-md-12">
                <h2>Employee Management</h2>
                <div class="buttons-container">
                   <button class="btn btn-primary" onclick="showInsertForm()">Insert Employee</button>
@@ -31,9 +59,22 @@
                      <button type="submit" class="btn btn-success">Update</button>
                   </form>
                </div>
+               <div id="employeeTable" style="display: none;">
+                  <h3>Employee Information</h3>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th>ID</th>
+                           <th>Name</th>
+                           <th>Position</th>
+                        </tr>
+                     </thead>
+                     <tbody id="employeeData">
+                        <!-- Employee data will be dynamically added here -->
+                     </tbody>
+                  </table>
+               </div>
             </div>
          </div>
       </div>
-   </section>
-   <!-- ...existing code... -->
-</body>
+<!-- body -->

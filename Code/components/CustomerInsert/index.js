@@ -3,6 +3,6 @@ const router = express.Router();
 
 const CustomerInsertController = require('./CustomerInsertController');
 
-router.get('/', CustomerInsertController.CustomerInsert);
-
+router.get('/', CustomerInsertController.Insert);
+router.post('/Customer',CustomerInsertController.CustomerInsert);
 module.exports = router;

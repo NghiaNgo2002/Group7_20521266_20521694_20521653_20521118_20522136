@@ -1,9 +1,45 @@
+<div class="body-section">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <h2>Customer Information</h2>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Name</th>
+                     <th>Phone</th>
+                     <th>Address</th>
+                     <th>Date purchase</th>
+                     
+                  </tr>
+               </thead>
+               <tbody>
+                  {{#each Customer}}
+                  <tr>
+                     <td>{{id}}</td>
+                     <td>{{name}}</td>
+                     <td>{{phone}}</td>
+                     <td>{{address}}</td>
+                     <td>{{datepurchase}}</td>
+                  </tr>
+                  {{/each}}
+                  </tbody>
+                  </table>
+                   </div>
+      </div>
+   </div>
+</div>
+
+
+
+
 <body class="main-layout inner_posituong computer_page">
    <!-- ...existing code... -->
    <section class="customer-section">
       <div class="container">
          <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-12">
                <h2>Customer Management</h2>
                <div class="buttons-container">
                   <button class="btn btn-primary" onclick="showInsertForm()">Insert Customer</button>
