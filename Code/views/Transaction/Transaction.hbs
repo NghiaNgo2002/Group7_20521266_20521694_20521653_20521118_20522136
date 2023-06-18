@@ -149,7 +149,7 @@
 
 
             <div class="search-form">
-  <h2>Search Product</h2>
+  <h2>Search Transaction</h2>
   <div>
   <form action="" method="GET">
     <label for="search_productname">Search Transaction ID:</label>
@@ -173,10 +173,40 @@
                         <th>price</th>
                      </tr>
                   </thead>
+                  <tbody>
+                  {{#each Transaction}}
+                  <tr>
+                     <td>{{id}}</td>
+                     <td>{{producttype}}</td>
+                     <td>{{productname}}</td>
+                     <td>{{datepurchase}}</td>
+                     <td>{{price}}</td>
+                  </tr>
+                  {{/each}}
+                  </tbody>
                   <tbody id="cartItems"></tbody>
                </table>
-               <button class="btn btn-primary" onclick="proceedToPayment()">Proceed to Payment</button>
+               <button class="btn btn-primary" onclick="showInsertForm()">Insert Transaction</button>
+                  <button class="btn btn-danger" onclick="showDeleteForm()">Delete Transaction</button>
+                  <button class="btn btn-success" onclick="showUpdateForm()">Update Transaction</button>
             </div>
          </div>
       </div>
    </div>
+<script>
+   function showInsertForm() {
+      window.location.href = "/TransactionInsert";
+   }
+</script>
+
+<script>
+   function showDeleteForm() {
+      window.location.href = "/TransactionDelete";
+   }
+</script>
+
+<script>
+   function showUpdateForm() {
+      window.location.href = "/TransactionUpdate";
+   }
+</script>
