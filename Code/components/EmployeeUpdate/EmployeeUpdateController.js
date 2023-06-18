@@ -7,7 +7,7 @@ exports.Update = (req, res) => {
     const {employee_name:employee_name} = req.body;
     const {employee_address:employee_address} = req.body;
     const {employee_phone:employee_phone} = req.body;
-    console.log(employee_id,employee_name,employee_address,employee_name);
+    console.log(employee_id,employee_name,employee_address,employee_phone);
     EmployeeUpdateService.EmployeeUpdate(employee_id,employee_name,employee_address,employee_phone);
     res.redirect("/EmployeeUpdate");
   }
