@@ -1,3 +1,57 @@
+<style>
+  .search-form {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .search-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .search-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .search-form input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .search-form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+<div class="search-form">
+<h2>Search Customer</h2>
+  <div>
+  <form action="" method="GET">
+    <label for="search_customerid">Search Customer ID:</label>
+    <input type="text" id="search_query" name="id" required>
+    <input type="submit" value="Search">
+  </form>
+</div>
+</div>
 <div class="body-section">
    <div class="container">
       <div class="row">
