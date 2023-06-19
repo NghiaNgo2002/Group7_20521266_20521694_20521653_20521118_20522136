@@ -1,0 +1,109 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+
+   .container {
+      margin: 20px auto;
+      text-align: center;
+         /* Center the content */
+   }
+  .form-group {
+    width: 400px;
+    margin: 0px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+
+
+  .form-group input[type="text"],
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0px;
+    border: 5px solid #ccc;
+    border-radius: 0%;
+  }
+
+
+
+  .form-group input[type="submit"] {
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    ;
+  }
+
+
+</style>
+
+
+<body class="main-layout inner_posituong computer_page">
+   <!-- ...existing code... -->
+   <section class="transaction-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4.5 offset-md-4">
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Insert Transaction</h2>
+                     <form action="/TransactionInsert/Transaction" method="POST">
+                  <div class="form-group">
+                     <label for="transaction_id">Transaction ID:</label>
+                      <input type="text" id="transaction_id" name="transaction_id" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="product_type">Product Type:</label>
+                      <input type="text" id="product_type" name="product_type" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="product_name">Product Name:</label>
+                      <input type="text" id="product_name" name="product_name" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="quantity">Quantity:</label>
+                      <input type="text" id="quantity" name="quantity" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="customer_id">Customer ID:</label>
+                      <input type="text" id="customer_id" name="customer_id" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="customer_name">Customer Name:</label>
+                      <input type="text" id="customer_name" name="customer_name" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="date_purchase">Date Purchase:</label>
+                      <input type="text" id="date_purchase" name="date_purchase" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="price">Price:</label>
+                      <input type="text" id="price" name="price" required>
+                  </div>                  
+                  <div class="form-group">
+                     <input type="submit" onclick="Notify()" value="Insert">
+                  </div>
+               </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ...existing code... -->
+</body>
+
