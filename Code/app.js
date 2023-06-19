@@ -17,7 +17,6 @@ const UpdateRouter = require('./components/Update');
 const SearchRouter = require('./components/Search');
 const LogInRouter = require('./components/LogIn');
 const RegisterRouter = require('./components/Register');
-const TransactionRouter = require('./components/Transaction');
 const ComputerRouter = require('./components/Computer');
 const HardiskRouter = require('./components/Hardisk');
 const MouseRouter = require('./components/Mouse');
@@ -32,6 +31,11 @@ const CustomerRouter = require('./components/Customer');
 const CustomerInsertRouter = require('./components/CustomerInsert');
 const CustomerDeleteRouter = require('./components/CustomerDelete');
 const CustomerUpdateRouter = require('./components/CustomerUpdate');
+const TransactionRouter = require('./components/Transaction');
+const TransactionDeleteRouter = require('./components/TransactionDelete');
+const TransactionUpdateRouter = require('./components/TransactionUpdate');
+const TransactionInsertRouter = require('./components/TransactionInsert');
+
 /* --------------------------- */
 
 const app = express();
@@ -59,7 +63,6 @@ app.use('/Update',UpdateRouter);
 app.use('/Search',SearchRouter);
 app.use('/LogIn',LogInRouter);
 app.use('/Register',RegisterRouter);
-app.use('/Transaction',TransactionRouter);
 app.use('/Computer',ComputerRouter);
 app.use('/Hardisk',HardiskRouter);
 app.use('/Mouse',MouseRouter);
@@ -74,6 +77,10 @@ app.use('/Customer',CustomerRouter);
 app.use('/CustomerInsert',CustomerInsertRouter);
 app.use('/CustomerDelete',CustomerDeleteRouter);
 app.use('/CustomerUpdate',CustomerUpdateRouter);
+app.use('/Transaction',TransactionRouter);
+app.use('/TransactionDelete',TransactionDeleteRouter);
+app.use('/TransactionUpdate',TransactionUpdateRouter);
+app.use('/TransactionInsert',TransactionInsertRouter);
 
 /* --------------------------- */
 
