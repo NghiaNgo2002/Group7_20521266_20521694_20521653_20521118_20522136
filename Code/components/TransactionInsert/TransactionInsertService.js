@@ -4,6 +4,6 @@ exports.Insert = () => {
     return TransactionInsertRepository.Insert();
 };
 
-exports.TransactionInsert = async (id,productname,producttype,datepurchase,price) => {
-    await TransactionInsertRepository.TransactionInsert(id,productname,producttype,datepurchase,price);
+exports.TransactionInsert = async (id,producttype,productname,quantity,customerid,customername,datepurchase,price) => {
+    await TransactionInsertRepository.TransactionInsert(id,producttype,productname,quantity,customerid,customername,datepurchase,price);
 };

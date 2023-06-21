@@ -11,6 +11,6 @@ exports.CustomerUpdate = async (req,res) => {
 
     console.log(customer_id,customer_name,customer_phone,customer_address,customer_datepurchase);
     CustomerUpdateService.CustomerUpdate(customer_id,customer_name,customer_phone,customer_address,customer_datepurchase);
-    res.redirect("/CustomerUpdate");
+    res.redirect("/Customer");
   }
   

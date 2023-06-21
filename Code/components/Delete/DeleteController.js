@@ -8,6 +8,6 @@ exports.Delete = (req, res) => {
     const {product_name:product_name} = req.body;
     
     DeleteService.DeleteProduct(product_id,product_name);
-    res.redirect("/Delete");
+    res.redirect("/Products");
   }
   

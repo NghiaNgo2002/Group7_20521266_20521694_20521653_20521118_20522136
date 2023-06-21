@@ -8,6 +8,6 @@ exports.Delete = (req, res) => {
     const {customer_name:customer_name} = req.body;
     console.log(customer_id,customer_name);
     CustomerDeleteService.CustomerDelete(customer_id,customer_name);
-    res.redirect("/CustomerDelete");
+    res.redirect("/Customer");
   }
   

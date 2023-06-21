@@ -6,6 +6,6 @@ exports.Delete = (req, res) => {
     const {employee_id:employee_id} = req.body;
     const {employee_name:employee_name} = req.body;
     EmployeeDeleteService.EmployeeDelete(employee_id,employee_name);
-    res.redirect("/EmployeeDelete");
+    res.redirect("/Employee");
   }
   

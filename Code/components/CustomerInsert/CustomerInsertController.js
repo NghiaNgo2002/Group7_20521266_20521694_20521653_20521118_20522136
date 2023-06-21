@@ -12,6 +12,6 @@ exports.Insert = (req, res) => {
 
     console.log(customer_id,customer_name,customer_phone,customer_address,customer_datepurchase);
     CustomerInsertService.CustomerInsert(customer_id,customer_name,customer_phone,customer_address,customer_datepurchase);
-    res.redirect("/CustomerInsert");
+    res.redirect("/Customer");
   }
   

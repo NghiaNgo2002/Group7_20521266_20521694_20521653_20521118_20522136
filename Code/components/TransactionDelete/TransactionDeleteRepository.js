@@ -1,5 +1,5 @@
 const db = require ('../../connect');
 
-exports.TransactionDelete = async (id,productname) => {
-    await db.connection.execute("Delete from Transaction where id = ? and productname = ?", [id,productname]);
+exports.TransactionDelete = async (id) => {
+    await db.connection.execute("Delete from transaction where id = ?", [id]);
 };

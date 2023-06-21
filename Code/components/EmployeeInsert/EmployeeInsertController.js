@@ -9,6 +9,6 @@ exports.Insert = (req, res) => {
     const {employee_phone:employee_phone} = req.body;
     console.log(employee_id,employee_name,employee_address,employee_name);
     EmployeeInsertService.EmployeeInsert(employee_id,employee_name,employee_address,employee_phone);
-    res.redirect("/EmployeeInsert");
+    res.redirect("/Employee");
   }
   

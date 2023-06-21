@@ -4,6 +4,6 @@ exports.Delete = () => {
     return TransactionDeleteRepository.Delete();
 };
 
-exports.TransactionDelete = async (id,productname) => {
-    await TransactionDeleteRepository.TransactionDelete(id,productname);
+exports.TransactionDelete = async (id) => {
+    await TransactionDeleteRepository.TransactionDelete(id);
 };

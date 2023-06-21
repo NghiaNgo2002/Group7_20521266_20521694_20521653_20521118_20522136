@@ -10,6 +10,6 @@ exports.Update = (req, res) => {
     const {product_category:product_category} = req.body;
     console.log(product_id,product_name,product_price,product_category,product_description);
     UpdateService.UpdateProduct(product_id,product_name,product_price,product_category,product_description);
-    res.redirect("/Update");
+    res.redirect("/Products");
   }
   

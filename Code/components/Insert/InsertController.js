@@ -12,5 +12,5 @@ exports.InsertProduct = async (req,res) => {
   const {product_category:product_category} = req.body;
 
   InsertService.InsertProduct(product_type,product_id,product_name,product_price,product_category,product_description);
-  res.redirect("/Insert");
+  res.redirect("/Products");
 }
